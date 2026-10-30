@@ -1,0 +1,658 @@
+
+satya@Thinkbook MINGW64 ~
+$ ls
+ AppData/             IBA_IOAPDATA_2026-10-23_09-41-21/   NTUSER.DAT{62187e37-ad0c-11f0-877f-9cb9618122
+'Application Data'@   Links/                              NTUSER.DAT{62187e37-ad0c-11f0-877f-9cb9618122
+ Contacts/           'Local Settings'@                    NTUSER.DAT{62187e37-ad0c-11f0-877f-9cb9618122
+ Cookies@             Music/                              NTUSER.DAT{62187e37-ad0c-11f0-877f-9cb9618122
+ Documents/          'My Documents'@                      NTUSER.DAT{62187e37-ad0c-11f0-877f-9cb9618122
+ Favorites/           NTUSER.DAT                          NTUSER.DAT{62187e37-ad0c-11f0-877f-9cb9618122
+
+satya@Thinkbook MINGW64 ~
+$ cd Desktop
+bash: cd: Desktop: No such file or directory
+
+satya@Thinkbook MINGW64 ~
+$ ..
+bash: ..: command not found
+
+satya@Thinkbook MINGW64 ~
+$ cd ..
+
+satya@Thinkbook MINGW64 /c/Users
+$ pwd
+/c/Users
+
+satya@Thinkbook MINGW64 /c/Users
+$ cd ..
+
+satya@Thinkbook MINGW64 /c
+$ cd..
+bash: cd..: command not found
+
+satya@Thinkbook MINGW64 /c
+$ cd /e
+
+satya@Thinkbook MINGW64 /e
+$ ls
+'$RECYCLE.BIN'/      POCOC3/            'System Volume Information'/     college/
+ Config.Msi/         Pictures/          'TCS ALML'/                      jpnote/
+ Documents/         'Program Files'/     Temp/                           share/
+'IQOO Z6 PRO'/       SATYA-USER/         Users/
+'LEARNING VIDEOS'/  'Sunita Marriage'/  'VERBAL NQT GEEKS FOR  GEEKS'/
+
+satya@Thinkbook MINGW64 /e
+$ cd jpnote
+
+satya@Thinkbook MINGW64 /e/jpnote
+$ ls
+ Assignment/        'TCS AI'/   datasets/    notes/             requirements_backup.txt
+ Projects_acedmic/   VISUAL/    notebooks/   requirements.txt   venv/
+
+satya@Thinkbook MINGW64 /e/jpnote
+$ mkdir Gitpractice
+
+satya@Thinkbook MINGW64 /e/jpnote
+$ ls
+ Assignment/    Projects_acedmic/   VISUAL/     notebooks/   requirements.txt          venv/
+ Gitpractice/  'TCS AI'/            datasets/   notes/       requirements_backup.txt
+
+satya@Thinkbook MINGW64 /e/jpnote
+$ cd Gitpractice
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice
+$ git init
+Initialized empty Git repository in E:/jpnote/Gitpractice/.git/
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$ ls -a
+./  ../  .git/  notes.txt
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$ ls .git
+HEAD  config  description  hooks/  info/  objects/  refs/
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$ touch names.txt
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$ git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        names.txt
+        notes.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$ git add .
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$ git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   names.txt
+        new file:   notes.txt
+
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$ git commit -m "saved"
+[main (root-commit) fbf91c6] saved
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 names.txt
+ create mode 100644 notes.txt
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$ git status
+On branch main
+nothing to commit, working tree clean
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$ cat names.txt
+Satyajit swain
+sunil barik
+sumit das
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$ vi names.txt
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$ cat names.txt
+Satyajit swain
+sunil barik
+sumit das
+Sambit rout
+Soumya Nayak
+Nalini Mallick
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$ git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   names.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$ git add .
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$ git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   names.txt
+
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$ git restore --staged names.txt
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$ git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   names.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$ git add .
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$ git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   names.txt
+
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$ git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   names.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   notes.txt
+
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$ git add.
+git: 'add.' is not a git command. See 'git --help'.
+
+The most similar command is
+        add
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$ git add .
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$ git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   names.txt
+        modified:   notes.txt
+
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$ git commit -m "notes updated"
+[main d2c52e5] notes updated
+ 2 files changed, 120 insertions(+)
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$ git log
+commit d2c52e5ffa6fd91cf40747d8dd28e46e90a80e3c (HEAD -> main)
+Author: Satyajit Swain <datasceince.24mdsc43@gmail.com>
+Date:   Fri Oct 30 00:18:37 2026 +0530
+
+    notes updated
+
+commit fbf91c62d9c04a4a2519dab5102f5c002e7618ad
+Author: Satyajit Swain <datasceince.24mdsc43@gmail.com>
+Date:   Thu Oct 29 22:22:40 2026 +0530
+
+    saved
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$ rm -rf names.txt
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$ git status
+On branch main
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    names.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$ git add .
+
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$ git commit -m "names.txt file deleted"
+[main a3b16f0] names.txt file deleted
+ 1 file changed, 6 deletions(-)
+ delete mode 100644 names.txt
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$ git log
+commit a3b16f02b7c1b5fc6f4ced15454c0f80962eb7de (HEAD -> main)
+Author: Satyajit Swain <datasceince.24mdsc43@gmail.com>
+Date:   Fri Oct 30 00:21:36 2026 +0530
+
+    names.txt file deleted
+
+commit d2c52e5ffa6fd91cf40747d8dd28e46e90a80e3c
+Author: Satyajit Swain <datasceince.24mdsc43@gmail.com>
+Date:   Fri Oct 30 00:18:37 2026 +0530
+
+    notes updated
+
+commit fbf91c62d9c04a4a2519dab5102f5c002e7618ad
+Author: Satyajit Swain <datasceince.24mdsc43@gmail.com>
+Date:   Thu Oct 29 22:22:40 2026 +0530
+
+    saved
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$ git restore  fbf91c62d9c04a4a2519dab5102f5c002e7618ad
+error: pathspec 'fbf91c62d9c04a4a2519dab5102f5c002e7618ad' did not match any file(s) known to git
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$ git checkout  fbf91c62d9c04a4a2519dab5102f5c002e7618ad~1
+error: pathspec 'fbf91c62d9c04a4a2519dab5102f5c002e7618ad~1' did not match any file(s) known to git
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$ git checkout  fbf91c62d9c04a4a2519dab5102f5c002e7618ad~1 names.txt
+error: pathspec 'fbf91c62d9c04a4a2519dab5102f5c002e7618ad~1' did not match any file(s) known to git
+error: pathspec 'names.txt' did not match any file(s) known to git
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$ git restore  --source=fbf91c62d9c04a4a2519dab5102f5c002e7618ad~1 names.txt
+fatal: could not resolve 'fbf91c62d9c04a4a2519dab5102f5c002e7618ad~1'
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$ git restore  --source=fbf91c62d9c04a4a2519dab5102f5c002e7618ad~1 [names.txt]
+fatal: could not resolve 'fbf91c62d9c04a4a2519dab5102f5c002e7618ad~1'
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$ git restore  --source=fbf91c62d9c04a4a2519dab5102f5c002e7618ad names.txt
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$ git status
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        names.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$ cat names.txt
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$ git log --follow --oneline -- names.txt
+a3b16f0 (HEAD -> main) names.txt file deleted
+d2c52e5 notes updated
+fbf91c6 saved
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$ git checkout  fbf91c62d9c04a4a2519dab5102f5c002e7618ad~1 names.txt
+error: pathspec 'fbf91c62d9c04a4a2519dab5102f5c002e7618ad~1' did not match any file(s) known to git
+error: pathspec 'names.txt' did not match any file(s) known to git
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$ git checkout  fbf91c62d9c04a4a2519dab5102f5c002e7618ad names.txt
+Updated 1 path from 3ed2eca
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$ git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   names.txt
+
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$ cat names.txt
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$ git log
+commit a3b16f02b7c1b5fc6f4ced15454c0f80962eb7de (HEAD -> main)
+Author: Satyajit Swain <datasceince.24mdsc43@gmail.com>
+Date:   Fri Oct 30 00:21:36 2026 +0530
+
+    names.txt file deleted
+
+commit d2c52e5ffa6fd91cf40747d8dd28e46e90a80e3c
+Author: Satyajit Swain <datasceince.24mdsc43@gmail.com>
+Date:   Fri Oct 30 00:18:37 2026 +0530
+
+    notes updated
+
+commit fbf91c62d9c04a4a2519dab5102f5c002e7618ad
+Author: Satyajit Swain <datasceince.24mdsc43@gmail.com>
+Date:   Thu Oct 29 22:22:40 2026 +0530
+
+    saved
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$ rm -rf names.txt
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$ git add.
+git: 'add.' is not a git command. See 'git --help'.
+
+The most similar command is
+        add
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$ git add .
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$ git commit -m "once again deleted"
+On branch main
+nothing to commit, working tree clean
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$ git status
+On branch main
+nothing to commit, working tree clean
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$ git log
+commit a3b16f02b7c1b5fc6f4ced15454c0f80962eb7de (HEAD -> main)
+Author: Satyajit Swain <datasceince.24mdsc43@gmail.com>
+Date:   Fri Oct 30 00:21:36 2026 +0530
+
+    names.txt file deleted
+
+commit d2c52e5ffa6fd91cf40747d8dd28e46e90a80e3c
+Author: Satyajit Swain <datasceince.24mdsc43@gmail.com>
+Date:   Fri Oct 30 00:18:37 2026 +0530
+
+    notes updated
+
+commit fbf91c62d9c04a4a2519dab5102f5c002e7618ad
+Author: Satyajit Swain <datasceince.24mdsc43@gmail.com>
+Date:   Thu Oct 29 22:22:40 2026 +0530
+
+    saved
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$ git restore  --source=d2c52e5ffa6fd91cf40747d8dd28e46e90a80e3c names.txt
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$ git log
+commit a3b16f02b7c1b5fc6f4ced15454c0f80962eb7de (HEAD -> main)
+Author: Satyajit Swain <datasceince.24mdsc43@gmail.com>
+Date:   Fri Oct 30 00:21:36 2026 +0530
+
+    names.txt file deleted
+
+commit d2c52e5ffa6fd91cf40747d8dd28e46e90a80e3c
+Author: Satyajit Swain <datasceince.24mdsc43@gmail.com>
+Date:   Fri Oct 30 00:18:37 2026 +0530
+
+    notes updated
+
+commit fbf91c62d9c04a4a2519dab5102f5c002e7618ad
+Author: Satyajit Swain <datasceince.24mdsc43@gmail.com>
+Date:   Thu Oct 29 22:22:40 2026 +0530
+
+    saved
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$ git status
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        names.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$ git add .
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$ git commit -m "reloaded names.txt"
+[main 7ce14dd] reloaded names.txt
+ 1 file changed, 6 insertions(+)
+ create mode 100644 names.txt
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$ git status
+On branch main
+nothing to commit, working tree clean
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$ git log
+commit 7ce14ddd06b2afcd3e01e16bef0cbfe9419a5971 (HEAD -> main)
+Author: Satyajit Swain <datasceince.24mdsc43@gmail.com>
+Date:   Fri Oct 30 01:09:27 2026 +0530
+
+    reloaded names.txt
+
+commit a3b16f02b7c1b5fc6f4ced15454c0f80962eb7de
+Author: Satyajit Swain <datasceince.24mdsc43@gmail.com>
+Date:   Fri Oct 30 00:21:36 2026 +0530
+
+    names.txt file deleted
+
+commit d2c52e5ffa6fd91cf40747d8dd28e46e90a80e3c
+Author: Satyajit Swain <datasceince.24mdsc43@gmail.com>
+Date:   Fri Oct 30 00:18:37 2026 +0530
+
+    notes updated
+
+commit fbf91c62d9c04a4a2519dab5102f5c002e7618ad
+Author: Satyajit Swain <datasceince.24mdsc43@gmail.com>
+Date:   Thu Oct 29 22:22:40 2026 +0530
+
+    saved
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$ rm -rf names.txt
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$ git add .
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$ git commit -m " again deleted"
+[main 1801b3a]  again deleted
+ 1 file changed, 6 deletions(-)
+ delete mode 100644 names.txt
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$ git log
+commit 1801b3aadc6b25dabe7a1b6d311c8090735e5d5f (HEAD -> main)
+Author: Satyajit Swain <datasceince.24mdsc43@gmail.com>
+Date:   Fri Oct 30 01:10:18 2026 +0530
+
+     again deleted
+
+commit 7ce14ddd06b2afcd3e01e16bef0cbfe9419a5971
+Author: Satyajit Swain <datasceince.24mdsc43@gmail.com>
+Date:   Fri Oct 30 01:09:27 2026 +0530
+
+    reloaded names.txt
+
+commit a3b16f02b7c1b5fc6f4ced15454c0f80962eb7de
+Author: Satyajit Swain <datasceince.24mdsc43@gmail.com>
+Date:   Fri Oct 30 00:21:36 2026 +0530
+
+    names.txt file deleted
+
+commit d2c52e5ffa6fd91cf40747d8dd28e46e90a80e3c
+Author: Satyajit Swain <datasceince.24mdsc43@gmail.com>
+Date:   Fri Oct 30 00:18:37 2026 +0530
+
+    notes updated
+
+commit fbf91c62d9c04a4a2519dab5102f5c002e7618ad
+Author: Satyajit Swain <datasceince.24mdsc43@gmail.com>
+Date:   Thu Oct 29 22:22:40 2026 +0530
+
+    saved
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$ git reset d2c52e5ffa6fd91cf40747d8dd28e46e90a80e3c
+Unstaged changes after reset:
+D       names.txt
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$ git log
+commit d2c52e5ffa6fd91cf40747d8dd28e46e90a80e3c (HEAD -> main)
+Author: Satyajit Swain <datasceince.24mdsc43@gmail.com>
+Date:   Fri Oct 30 00:18:37 2026 +0530
+
+    notes updated
+
+commit fbf91c62d9c04a4a2519dab5102f5c002e7618ad
+Author: Satyajit Swain <datasceince.24mdsc43@gmail.com>
+Date:   Thu Oct 29 22:22:40 2026 +0530
+
+    saved
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$ git status
+On branch main
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    names.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$ git add .
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$ git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    names.txt
+
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$ touch surname.txt
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$ vi surname.txt
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$ touch houses.txt
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$ git add .
+warning: in the working copy of 'surname.txt', LF will be replaced by CRLF the next time Git touches it
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$ git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   houses.txt
+        deleted:    names.txt
+        new file:   surname.txt
+
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$ git stash
+Saved working directory and index state WIP on main: d2c52e5 notes updated
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$ git status
+On branch main
+nothing to commit, working tree clean
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$ git log
+commit d2c52e5ffa6fd91cf40747d8dd28e46e90a80e3c (HEAD -> main)
+Author: Satyajit Swain <datasceince.24mdsc43@gmail.com>
+Date:   Fri Oct 30 00:18:37 2026 +0530
+
+    notes updated
+
+commit fbf91c62d9c04a4a2519dab5102f5c002e7618ad
+Author: Satyajit Swain <datasceince.24mdsc43@gmail.com>
+Date:   Thu Oct 29 22:22:40 2026 +0530
+
+    saved
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$ cat names.txt
+Satyajit swain
+sunil barik
+sumit das
+Sambit rout
+Soumya Nayak
+Nalini Mallick
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$ git stash pop
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   houses.txt
+        new file:   surname.txt
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    names.txt
+
+Dropped refs/stash@{0} (f4bab12dd14c9071c8e56bc7294bd9dddf28b819)
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$ git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   houses.txt
+        new file:   surname.txt
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    names.txt
+
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$ git restore names.txt
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$ cat names.txt
+Satyajit swain
+sunil barik
+sumit das
+Sambit rout
+Soumya Nayak
+Nalini Mallick
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$ git stash clear
+
+satya@Thinkbook MINGW64 /e/jpnote/Gitpractice (main)
+$
